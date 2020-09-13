@@ -26,7 +26,7 @@ class MainFragmentAdapter(val dataList: ArrayList<GADSData>)  : RecyclerView.Ada
     class JobsViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bindItems(data: GADSData) = with(itemView) {
             tvName.text = data.name
-            tvCountry.text = data.country
+            tvCountry.text = "${data.progress}  ${data.country}"
             imgMDataImg.load(data.badgeUrl)
         }
     }
